@@ -3,6 +3,7 @@
 
 #include "vector_extra.cpp"
 
+template<typename T>
 std::vector<T> slice(std::vector<T> const &v, int m, int n);
 
 #endif
