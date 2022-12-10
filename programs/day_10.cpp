@@ -72,15 +72,15 @@ int solve_day10_2(std::string input_filename) {
 }
 
 void write_pixel( int pc, int X ) {
+    if( pc % 40 == 0 ) {
+        std::cout << std::endl;
+    }
+
     if( should_light_up_pixel(pc, X ) ) {
         std::cout << "#";
     }
     else {
         std::cout << " ";
-    }
-
-    if( pc % 40 == 0 ) {
-        std::cout << std::endl;
     }
 }
 
