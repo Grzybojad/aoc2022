@@ -98,8 +98,18 @@ int solve_day9_1(std::string input_filename) {
     return tail_visited.size();
 }
 
+int solve_day9_2(std::string input_filename) {
+    std::vector<std::string> lines = read_lines_string(input_filename);
+
+    for (size_t i = 0; i < lines.size(); i++) {
+        std::string line = lines[i];
+    }
+
+    return 0;
+}
+
 int distance( pos p1, pos p2 ) {
-    if( abs( p1.x - p2.x ) > abs( p1.y - p2.y ) ) {
+    if( abs( p1.x - p2.x ) >  abs( p1.y - p2.y ) ) {
         return abs( p1.x - p2.x );
     }
     return abs( p1.y - p2.y );
