@@ -5,6 +5,11 @@
 
 
 int solve_day12_1(std::string input_filename) {
+
+    // skip all code
+    return 0;
+
+
     std::vector<std::string> lines = read_lines_string(input_filename);
 
     int g_height = lines.size();

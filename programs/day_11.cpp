@@ -83,6 +83,10 @@ long solve_day11_2(std::string input_filename) {
     std::vector<monkey> monkeys = load_monkeys(input_filename);
 
     int round = 1;
+    long common_multiplier = 1;
+    for (size_t i = 0; i < monkeys.size(); i++) {
+        common_multiplier *= monkeys[i].div_test;
+    }    
 
     for (size_t round_i = 0; round_i < 10000; round_i++) {
         for (size_t monkey_i = 0; monkey_i < monkeys.size(); monkey_i++) {
@@ -107,13 +111,12 @@ long solve_day11_2(std::string input_filename) {
                     }
                 }
 
-                // worry /= 3;
                 m.inspect_count++;
 
                 if( worry % m.div_test == 0 ) {
-                    monkeys[m.true_index].items.push_back( worry );
+                    monkeys[m.true_index].items.push_back( worry % common_multiplier );
                 } else {
-                    monkeys[m.false_index].items.push_back( worry );
+                    monkeys[m.false_index].items.push_back( worry % common_multiplier );
                 }
             }
 
@@ -124,7 +127,6 @@ long solve_day11_2(std::string input_filename) {
     std::vector<long> inspections;
     for (size_t i = 0; i < monkeys.size(); i++) {
         inspections.push_back( monkeys[i].inspect_count );
-        // std::cout << monkeys[i].inspect_count << std::endl;
     }
     std::sort(inspections.begin(), inspections.end(), std::greater<long>());
 
