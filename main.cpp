@@ -10,6 +10,7 @@
 #include "programs/day_8.cpp"
 #include "programs/day_9.cpp"
 #include "programs/day_10.cpp"
+#include "programs/day_11.cpp"
 
 
 int main() {
@@ -23,6 +24,7 @@ int main() {
     std::string input_day8 = "inputs/input_8.txt";
     std::string input_day9 = "inputs/input_9.txt";
     std::string input_day10 = "inputs/input_10.txt";
+    std::string input_day11 = "inputs/input_11.txt";
 
     std::cout << "Day 1, star 1: " << solve_day1_1(input_day1) << std::endl;
     std::cout << "Day 1, star 2: " << solve_day1_2(input_day1) << std::endl << std::endl;
@@ -53,6 +55,9 @@ int main() {
 
     std::cout << "Day 10, star 1: " << solve_day10_1(input_day10) << std::endl;
     std::cout << "Day 10, star 2: " << solve_day10_2(input_day10) << std::endl << std::endl;
+
+    std::cout << "Day 11, star 1: " << solve_day11_1(input_day11) << std::endl;
+    std::cout << "Day 11, star 2: " << solve_day11_2(input_day11) << std::endl << std::endl;
 
 
     return 0;

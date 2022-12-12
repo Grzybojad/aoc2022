@@ -46,26 +46,24 @@ int solve_day10_2(std::string input_filename) {
     int X = 1;
     std::map<int, int> signal;
 
-    std::cout << std::endl;
-
     for (size_t i = 0; i < lines.size(); i++) {
         std::string line = lines[i];
 
         std::vector<std::string > split_line;
         split(line,split_line,  ' ');
 
-        write_pixel( pc, X );
+        // write_pixel( pc, X );
         pc++;
 
         if(split_line[0] == "addx") {
-            write_pixel( pc, X );
+            // write_pixel( pc, X );
             pc++;
 
             X += stoi(split_line[1]);
         }
     }
 
-    write_pixel( pc, X );
+    // write_pixel( pc, X );
     pc++;
 
     return 0;
